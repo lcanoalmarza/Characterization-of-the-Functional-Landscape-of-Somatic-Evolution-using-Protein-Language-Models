@@ -27,6 +27,8 @@ pip install -e .
 
 **Usage:** Given a multifasta file containing wild-type and mutant sequences, plm_dissect provides four analytical modules: `score` (disruption quantification), `visualize` (functional interpretation of deviating features), `cluster` (variant clustering by disruption profile similarity), and `profile` (comparison against oncoKB-annotated variants).
 
+**Note** Due to big files of pre-computed concept-feature association, the complete plm_dissect tool could not be uploaded to this repository. We include a partial version without precomputed association for interpretability.
+
 ![plm_dissect Workflow](plm_dissect_workflow.github.svg)
 
 Example analyses demonstrating the tool's functionality are currently stored on the affected HPC cluster and could not be included here.
