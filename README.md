@@ -10,10 +10,24 @@ Master Thesis project to earn the Master's Degree in Computational Biology from 
 ## Contents
 
 ### 1. Systematic pLM Comparison
-Scripts implementing the high-throughput benchmark of six protein language models (ProtT5, ProstT5, ESMv1, VESM 650M, ESM2, ESMC) on an _in-silico_ saturation mutagenesis experiment across oncoKB cancer genes (Bandlamudi et al., 2026), including embedding extraction, deviation profile computation, and statistical association with functional annotations and AlphaMissense pathogenicity scores.
+
+Embedding extraction was performed using available embedding scripts in [ESM GitHub](https://github.com/facebookresearch/esm/blob/main/scripts/extract.py) and a [modification of the ProtT5 embedder](https://github.com/jordibc/Large-scale-Functional-Annotation-of-Prokaryotic-Genes-using-Protein-Language-Models---TFG/blob/main/jordi/t5_embedder.py) in [ProtTrans](https://github.com/agemagician/ProtTrans/blob/master/Embedding/prott5_embedder.py). Scripts implementing the high-throughput benchmark of six protein language models (ProtT5, ProstT5, ESMv1, VESM 650M, ESM2, ESMC) on an _in-silico_ saturation mutagenesis experiment across oncoKB cancer genes (Bandlamudi et al., 2026), including embedding extraction, deviation profile computation, and statistical association with functional annotations and AlphaMissense pathogenicity scores.
+
+We provide here information about the models' weigths used in our comparative analysis:
+
+| Model | Weights URL |
+| :--- | :--- |
+| **ProtT5** | [HuggingFace](https://huggingface.co/Rostlab/prot_t5_xl_uniref50) |
+| **ProstT5** | [HuggingFace](https://huggingface.co/Rostlab/ProstT5) |
+| **ESMv1** (model 1) | [HuggingFace](https://huggingface.co/facebook/esm1v_t33_650M_UR90S_1) |
+| **VESM** | [HuggingFace](https://huggingface.co/ntranoslab/vesm/blob/main/VESM_650M.pth) |
+| **EMS2** | [HuggingFace](https://huggingface.co/facebook/esm2_t30_150M_UR50D) |
+| **ESMC** | [HuggingFace](https://huggingface.co/biohub/ESMC-300M) |
+
+
 
 ### 2. SAE-Based Functional Interpretation and Human-SAE training
-Analysis pipeline for transforming pLM embeddings into interpretable sparse representations using the [InterPLM](https://github.com/ElanaPearl/InterPLM/) toolkit, including validation against oncoKB/MSK-50K pathogenicity annotations and human proteome concept-feature mapping.
+Analysis pipeline for transforming pLM embeddings into interpretable sparse representations using the [InterPLM](https://github.com/ElanaPearl/InterPLM/) toolkit, including validation against oncoKB/MSK-50K pathogenicity annotations and human proteome concept-feature mapping. Human-SAE weitgths will provided in this repository as soon as cluster access is restored.
 
 ### 3. plm_dissect
 A command-line tool for the automated extraction and analysis of SAE-derived interpretable features from wild-type and mutant protein sequences.
